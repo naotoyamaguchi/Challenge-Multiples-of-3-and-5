@@ -5,8 +5,24 @@
  */
 exports.sumOfAMultiple = function( n ) {
   var sum = 0;
+  var array = [];
+  function add(a,b){
+    return a + b;
+  }
 
-  // do your work here
+  for(var i = 0; i < n; i++){
+    if(i%5 === 0){
+      array.push(i);
+      // console.log(array);
+    } else {
+    if(i%3 === 0){
+      array.push(i);
+      // console.log(array);
+    }
+    }
+  }
 
-  return sum;
+  var answer = array.reduce(add,  0 );
+
+  return answer;
 };
